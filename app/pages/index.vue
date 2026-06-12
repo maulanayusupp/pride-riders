@@ -1,10 +1,37 @@
 <script setup lang="ts">
-const SITE_URL = 'https://pridecommunity.id'
+const TITLE = 'PRIDE Official Community | One Block, One Brotherhood'
+const DESCRIPTION =
+  'PRIDE (Permata Riders Independent & Dedicated Enthusiast) — komunitas riders Permata Cimahi yang menjunjung persaudaraan, keselamatan, dan rasa hormat. Setiap perjalanan adalah cerita. More Than A Ride.'
+
+// Origin diambil dari request saat SSR (atau NUXT_PUBLIC_SITE_URL kalau di-set),
+// sehingga og:image selalu berupa URL absolut yang benar-benar bisa diakses —
+// syarat mutlak agar preview muncul di WhatsApp/sosmed.
+const config = useRuntimeConfig()
+const SITE_URL = (config.public.siteUrl || useRequestURL().origin).replace(/\/$/, '')
+const OG_IMAGE = `${SITE_URL}/images/og-image.jpg`
 
 useSeoMeta({
-  title: 'PRIDE Official Community | One Block, One Brotherhood',
-  description:
-    'PRIDE (Permata Riders Independent & Dedicated Enthusiast) — komunitas riders Permata Cimahi yang menjunjung persaudaraan, keselamatan, dan rasa hormat. Setiap perjalanan adalah cerita. More Than A Ride.',
+  title: TITLE,
+  description: DESCRIPTION,
+  ogType: 'website',
+  ogSiteName: 'PRIDE — Permata Riders Independent & Dedicated Enthusiast',
+  ogLocale: 'id_ID',
+  ogUrl: `${SITE_URL}/`,
+  ogTitle: TITLE,
+  ogDescription: DESCRIPTION,
+  ogImage: OG_IMAGE,
+  ogImageWidth: 800,
+  ogImageHeight: 800,
+  ogImageType: 'image/jpeg',
+  ogImageAlt: 'Emblem PRIDE — Permata Riders Independent & Dedicated Enthusiast',
+  twitterCard: 'summary_large_image',
+  twitterTitle: TITLE,
+  twitterDescription: DESCRIPTION,
+  twitterImage: OG_IMAGE,
+})
+
+useHead({
+  link: [{ rel: 'canonical', href: `${SITE_URL}/` }],
 })
 
 // Structured data agar tampil lebih kaya di hasil pencarian.
