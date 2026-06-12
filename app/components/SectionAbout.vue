@@ -1,6 +1,5 @@
 <script setup lang="ts">
 const stats = [
-  { target: 48, suffix: '+', label: 'Members' },
   { target: 24, suffix: '+', label: 'Events' },
   { target: 36, suffix: '+', label: 'Tours' },
   { target: 3, suffix: '', label: 'Years Together' },
@@ -30,7 +29,7 @@ const stats = [
           tercipta di sepanjang jalan.
         </p>
 
-        <div v-reveal="400" class="mt-12 grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-4 lg:grid-cols-2 xl:grid-cols-4">
+        <div v-reveal="400" class="mt-12 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-3">
           <StatCounter
             v-for="stat in stats"
             :key="stat.label"
