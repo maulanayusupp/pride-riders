@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="480" viewBox="0 0 640 480">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#160d0d"/>
+      <stop offset="100%" stop-color="#0a0707"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="480" fill="url(#bg)"/>
+  <ellipse cx="320" cy="264" rx="448" ry="105" fill="#d4af37" opacity="0.07"/>
+  <path d="M0 264 L128 190 L256 250 L384 179 L512 242 L640 198 L640 480 L0 480 Z" fill="#0d0d0d"/>
+  <path d="M0 336 L160 275 L320 336 L480 285 L640 336 L640 480 L0 480 Z" fill="#090909"/>
+  <path d="M288 480 C352 408 256 374 332 326" fill="none" stroke="#d4af37" stroke-opacity="0.4" stroke-width="2" stroke-dasharray="10 12"/>
+  <text x="320" y="441" fill="#d4af37" fill-opacity="0.85" font-family="Arial, sans-serif" font-size="22" letter-spacing="8" text-anchor="middle">BAKTI SOSIAL</text>
+  <text x="320" y="467" fill="#9ca3af" font-family="Arial, sans-serif" font-size="11" letter-spacing="4" text-anchor="middle">PRIDE COMMUNITY</text>
+</svg>
