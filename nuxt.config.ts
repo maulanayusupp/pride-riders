@@ -1,13 +1,18 @@
 import tailwindcss from '@tailwindcss/vite'
 
-// Ganti dengan domain resmi komunitas saat sudah ada.
-const SITE_URL = 'https://pridecommunity.id'
-const SITE_NAME = 'PRIDE — Permata Riders Independent & Dedicated Enthusiast'
 const SITE_TITLE = 'PRIDE Official Community | One Block, One Brotherhood'
 const SITE_DESCRIPTION =
   'PRIDE (Permata Riders Independent & Dedicated Enthusiast) — komunitas riders Permata Cimahi yang menjunjung persaudaraan, keselamatan, dan rasa hormat. Setiap perjalanan adalah cerita. More Than A Ride.'
 
 export default defineNuxtConfig({
+  runtimeConfig: {
+    public: {
+      // Kosong = otomatis pakai domain yang sedang serve website.
+      // Bisa di-set permanen lewat env: NUXT_PUBLIC_SITE_URL=https://domainresmi.id
+      siteUrl: '',
+    },
+  },
+
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
 
@@ -46,33 +51,13 @@ export default defineNuxtConfig({
         { name: 'theme-color', content: '#090909' },
         { name: 'application-name', content: 'PRIDE Community' },
         { name: 'apple-mobile-web-app-title', content: 'PRIDE' },
-
-        // Open Graph
-        { property: 'og:type', content: 'website' },
-        { property: 'og:site_name', content: SITE_NAME },
-        { property: 'og:locale', content: 'id_ID' },
-        { property: 'og:url', content: SITE_URL },
-        { property: 'og:title', content: SITE_TITLE },
-        { property: 'og:description', content: SITE_DESCRIPTION },
-        { property: 'og:image', content: `${SITE_URL}/images/og-image.jpg` },
-        { property: 'og:image:width', content: '1200' },
-        { property: 'og:image:height', content: '1200' },
-        {
-          property: 'og:image:alt',
-          content: 'Emblem PRIDE — Permata Riders Independent & Dedicated Enthusiast',
-        },
-
-        // Twitter / X
-        { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:title', content: SITE_TITLE },
-        { name: 'twitter:description', content: SITE_DESCRIPTION },
-        { name: 'twitter:image', content: `${SITE_URL}/images/og-image.jpg` },
+        // Open Graph & Twitter (og:url, og:image, canonical) di-set dinamis
+        // di app/pages/index.vue agar selalu mengikuti domain aslinya.
       ],
       link: [
         { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32.png' },
         { rel: 'icon', type: 'image/png', sizes: '64x64', href: '/favicon-64.png' },
         { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
-        { rel: 'canonical', href: SITE_URL },
       ],
     },
     pageTransition: { name: 'page', mode: 'out-in' },
