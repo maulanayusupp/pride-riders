@@ -32,10 +32,20 @@ onBeforeUnmount(() => {
     :class="scrolled ? 'border-b border-white/5 bg-night/85 backdrop-blur-md' : 'bg-transparent'"
   >
     <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
-      <a href="#home" class="flex items-baseline gap-3" aria-label="PRIDE — kembali ke atas">
-        <span class="font-display text-gold-gradient text-3xl tracking-[0.25em]">PRIDE</span>
-        <span class="text-silver hidden text-[10px] tracking-[0.3em] uppercase sm:inline">
-          One Block, One Brotherhood
+      <a href="#home" class="flex items-center gap-3" aria-label="PRIDE — kembali ke atas">
+        <NuxtImg
+          src="/images/logo-192.png"
+          alt="Logo PRIDE"
+          width="44"
+          height="44"
+          format="webp"
+          class="h-11 w-11 drop-shadow-[0_0_12px_rgba(212,175,55,0.35)]"
+        />
+        <span class="flex flex-col">
+          <span class="font-display text-gold-gradient text-2xl leading-none tracking-[0.25em]">PRIDE</span>
+          <span class="text-silver hidden text-[9px] tracking-[0.28em] uppercase sm:inline">
+            One Block, One Brotherhood
+          </span>
         </span>
       </a>
 

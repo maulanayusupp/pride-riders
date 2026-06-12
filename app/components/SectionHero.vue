@@ -88,14 +88,25 @@ onBeforeUnmount(() => {
 
     <!-- Content -->
     <div class="relative z-10 px-6 text-center">
+      <NuxtImg
+        src="/images/logo.png"
+        alt="Emblem PRIDE — Permata Riders Independent & Dedicated Enthusiast"
+        width="208"
+        height="208"
+        format="webp"
+        preload
+        fetchpriority="high"
+        class="hero-enter mx-auto mb-6 h-40 w-40 drop-shadow-[0_0_50px_rgba(212,175,55,0.35)] md:h-52 md:w-52"
+        style="--hero-delay: 100ms"
+      />
       <p
-        class="hero-enter text-gold mb-6 text-xs font-semibold tracking-[0.5em] uppercase md:text-sm"
-        style="--hero-delay: 200ms"
+        class="hero-enter text-gold mb-4 text-xs font-semibold tracking-[0.5em] uppercase md:text-sm"
+        style="--hero-delay: 250ms"
       >
         More Than A Ride
       </p>
       <h1
-        class="hero-enter font-display text-[clamp(5rem,18vw,13rem)] leading-none tracking-[0.12em] text-white"
+        class="hero-enter font-display text-[clamp(4rem,14vw,9rem)] leading-none tracking-[0.12em] text-white"
         style="--hero-delay: 400ms"
       >
         PR<span class="text-gold-gradient">I</span>DE

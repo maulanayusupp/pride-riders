@@ -19,11 +19,22 @@ const socials = [
   <footer class="bg-coal border-t border-white/5">
     <div class="mx-auto max-w-7xl px-6 py-16 lg:px-10">
       <div class="flex flex-col items-center gap-10 md:flex-row md:items-start md:justify-between">
-        <div class="text-center md:text-left">
-          <p class="font-display text-gold-gradient text-4xl tracking-[0.25em]">PRIDE</p>
-          <p class="text-silver mt-2 text-xs tracking-[0.3em] uppercase">
-            One Block, One Brotherhood
-          </p>
+        <div class="flex flex-col items-center gap-4 md:flex-row md:items-center md:text-left">
+          <NuxtImg
+            src="/images/logo-192.png"
+            alt="Logo PRIDE"
+            width="72"
+            height="72"
+            format="webp"
+            loading="lazy"
+            class="h-18 w-18 drop-shadow-[0_0_16px_rgba(212,175,55,0.3)]"
+          />
+          <div class="text-center md:text-left">
+            <p class="font-display text-gold-gradient text-4xl tracking-[0.25em]">PRIDE</p>
+            <p class="text-silver mt-2 text-xs tracking-[0.3em] uppercase">
+              One Block, One Brotherhood
+            </p>
+          </div>
         </div>
 
         <nav aria-label="Footer">

@@ -7,6 +7,16 @@
     />
 
     <div class="relative z-10 mx-auto max-w-4xl px-6 text-center lg:px-10">
+      <NuxtImg
+        v-reveal
+        src="/images/logo-192.png"
+        alt="Emblem PRIDE"
+        width="112"
+        height="112"
+        format="webp"
+        loading="lazy"
+        class="mx-auto mb-8 h-28 w-28 drop-shadow-[0_0_30px_rgba(212,175,55,0.4)]"
+      />
       <p v-reveal class="text-gold mb-4 text-xs font-semibold tracking-[0.4em] uppercase">
         Join The Brotherhood
       </p>

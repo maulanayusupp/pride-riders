@@ -48,7 +48,15 @@
         </p>
         <footer class="mt-8 flex items-center justify-center gap-4">
           <span class="bg-gold/60 h-px w-10" />
-          <span class="text-gold text-xs tracking-[0.4em] uppercase">PRIDE</span>
+          <NuxtImg
+            src="/images/logo-192.png"
+            alt="Emblem PRIDE"
+            width="56"
+            height="56"
+            format="webp"
+            loading="lazy"
+            class="h-14 w-14 drop-shadow-[0_0_16px_rgba(212,175,55,0.35)]"
+          />
           <span class="bg-gold/60 h-px w-10" />
         </footer>
       </blockquote>

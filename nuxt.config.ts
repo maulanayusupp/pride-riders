@@ -1,5 +1,12 @@
 import tailwindcss from '@tailwindcss/vite'
 
+// Ganti dengan domain resmi komunitas saat sudah ada.
+const SITE_URL = 'https://pridecommunity.id'
+const SITE_NAME = 'PRIDE — Permata Riders Independent & Dedicated Enthusiast'
+const SITE_TITLE = 'PRIDE Official Community | One Block, One Brotherhood'
+const SITE_DESCRIPTION =
+  'PRIDE (Permata Riders Independent & Dedicated Enthusiast) — komunitas riders Permata Cimahi yang menjunjung persaudaraan, keselamatan, dan rasa hormat. Setiap perjalanan adalah cerita. More Than A Ride.'
+
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
@@ -23,31 +30,50 @@ export default defineNuxtConfig({
   app: {
     head: {
       htmlAttrs: { lang: 'id' },
-      title: 'PRIDE Official Community | One Block, One Brotherhood',
+      title: SITE_TITLE,
+      titleTemplate: '%s',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        {
-          name: 'description',
-          content:
-            'Website resmi PRIDE (Permata Riders Independent & Dedicated Enthusiast). Komunitas yang menjunjung tinggi persaudaraan, keselamatan, dan perjalanan penuh cerita.',
-        },
+        { name: 'description', content: SITE_DESCRIPTION },
         {
           name: 'keywords',
           content:
-            'PRIDE Community, Permata Cimahi, Motor Community Bandung, Touring Bandung, Brotherhood Community, Riding Community, Safety Riding, Community Journey',
+            'PRIDE Community, Permata Cimahi, Motor Community Bandung, Touring Bandung, Brotherhood Community, Riding Community, Safety Riding, Community Journey, Komunitas Motor Cimahi, Touring Lembang',
         },
+        { name: 'author', content: 'PRIDE Community' },
+        { name: 'robots', content: 'index, follow, max-image-preview:large' },
         { name: 'theme-color', content: '#090909' },
+        { name: 'application-name', content: 'PRIDE Community' },
+        { name: 'apple-mobile-web-app-title', content: 'PRIDE' },
+
+        // Open Graph
         { property: 'og:type', content: 'website' },
-        { property: 'og:title', content: 'PRIDE Official Community | One Block, One Brotherhood' },
+        { property: 'og:site_name', content: SITE_NAME },
+        { property: 'og:locale', content: 'id_ID' },
+        { property: 'og:url', content: SITE_URL },
+        { property: 'og:title', content: SITE_TITLE },
+        { property: 'og:description', content: SITE_DESCRIPTION },
+        { property: 'og:image', content: `${SITE_URL}/images/og-image.jpg` },
+        { property: 'og:image:width', content: '1200' },
+        { property: 'og:image:height', content: '1200' },
         {
-          property: 'og:description',
-          content:
-            'Komunitas yang menjunjung tinggi persaudaraan, keselamatan, dan perjalanan penuh cerita. More Than A Ride.',
+          property: 'og:image:alt',
+          content: 'Emblem PRIDE — Permata Riders Independent & Dedicated Enthusiast',
         },
+
+        // Twitter / X
         { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:title', content: SITE_TITLE },
+        { name: 'twitter:description', content: SITE_DESCRIPTION },
+        { name: 'twitter:image', content: `${SITE_URL}/images/og-image.jpg` },
       ],
-      link: [{ rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
+      link: [
+        { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32.png' },
+        { rel: 'icon', type: 'image/png', sizes: '64x64', href: '/favicon-64.png' },
+        { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
+        { rel: 'canonical', href: SITE_URL },
+      ],
     },
     pageTransition: { name: 'page', mode: 'out-in' },
   },

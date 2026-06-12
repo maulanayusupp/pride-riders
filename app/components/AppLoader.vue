@@ -9,9 +9,13 @@ defineProps<{ visible: boolean }>()
       class="bg-night fixed inset-0 z-[100] flex flex-col items-center justify-center gap-6"
       aria-hidden="true"
     >
-      <span class="font-display text-gold-gradient text-6xl tracking-[0.35em] md:text-7xl">
-        PRIDE
-      </span>
+      <img
+        src="/images/logo-192.png"
+        alt=""
+        width="144"
+        height="144"
+        class="h-36 w-36 drop-shadow-[0_0_30px_rgba(212,175,55,0.4)]"
+      />
       <div class="h-px w-48 overflow-hidden bg-white/10">
         <div class="loader-line bg-gold h-full w-full" />
       </div>
